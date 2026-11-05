@@ -1,0 +1,29 @@
+.input {
+  height: 40px;
+  padding:3px 8px;
+  width:290px;
+  border: 1px solid #ccccccd5;
+  font-size:16px;
+  outline:none;
+  border-radius: 8px;
+}
+.input:focus {
+  border: 2px solid #2479f8d5;
+  border-radius: 8px;
+}
+.btn{
+  margin-left:5px;
+  text-align:center;
+  padding: 8px 16px;
+  background:#16A34A;
+  color:white;
+  border:none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  font-size: 19px;
+}
+.btn:hover{
+  background:#14a74ac0;
+}
+
