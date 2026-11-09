@@ -1,4 +1,4 @@
-import {useState} from 'react'
+import {useState,useEffect} from 'react'
 import './App.css'
 
 
@@ -13,7 +13,14 @@ function App() {
   const [nom,setNom]= useState('')
   const valeur=nom.trim()
 
- const[produits,setProduits]= useState([])
+ const[produits,setProduits]= useState(()=>{
+  const save = localStorage.getItem("produits")
+  return save ? JSON.parse(save) : []
+ })
+ 
+ useEffect(()=>{
+  localStorage.setItem("produits", JSON.stringify(produits ))
+ },[produits])
 
   
   function  AjouterProduit(e){
